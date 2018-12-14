@@ -1,5 +1,5 @@
 {
-    "name": "socialiteproviders/weixin",
+    "name": "aiwozhe/laravel-socialite-providers-weixin",
     "description": "Weixin OAuth2 Provider for Laravel Socialite",
     "license": "MIT",
     "authors": [{
@@ -8,6 +8,9 @@
     }, {
         "name": "xiami",
         "email": "jhdxr@php.net"
+    }, {
+        "name": "sunqj",
+        "email": "aiwozhe@yeah.net"
     }],
     "require": {
         "php": "^5.6 || ^7.0",
