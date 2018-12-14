@@ -81,7 +81,7 @@ class Provider extends AbstractProvider implements ProviderInterface
             $user = json_decode($response->getBody(), true);
             
             // 判断请求是否成功，请求失败则抛出异常
-            if ($user['errcode'] != 0) {
+            if (!empty($user['errcode'])) {
                 throw new \Exception($user['errmsg']);
             }
         }
@@ -126,7 +126,7 @@ class Provider extends AbstractProvider implements ProviderInterface
         $this->credentialsResponseBody = json_decode($response->getBody(), true);
         
         // 判断请求是否成功，请求失败则抛出异常
-        if ($this->credentialsResponseBody['errcode'] != 0) {
+        if (!empty($this->credentialsResponseBody['errcode'])) {
             throw new \Exception($this->credentialsResponseBody['errmsg']);
         }
         
