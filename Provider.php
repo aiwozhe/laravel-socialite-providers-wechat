@@ -79,6 +79,11 @@ class Provider extends AbstractProvider implements ProviderInterface
             ]);
 
             $user = json_decode($response->getBody(), true);
+            
+            // 判断请求是否成功，请求失败则抛出异常
+            if ($user['errcode'] != 0) {
+                throw new \Exception($user['errmsg']);
+            }
         }
 
         return $user;
