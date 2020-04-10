@@ -1,6 +1,6 @@
 {
-    "name": "aiwozhe/laravel-socialite-providers-weixin",
-    "description": "Weixin OAuth2 Provider for Laravel Socialite",
+    "name": "socialiteproviders/wechat",
+    "description": "Wechat OAuth2 Provider for Laravel Socialite",
     "license": "MIT",
     "authors": [{
         "name": "xyxu",
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SocialiteProviders\\Weixin\\": ""
+            "SocialiteProviders\\Wechat\\": ""
         }
     }
 }
