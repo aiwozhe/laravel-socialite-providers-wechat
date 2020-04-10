@@ -4,7 +4,7 @@ namespace SocialiteProviders\Weixin;
 
 use SocialiteProviders\Manager\SocialiteWasCalled;
 
-class WeixinExtendSocialite
+class WechatExtendSocialite
 {
     /**
      * Register the provider.
@@ -14,7 +14,7 @@ class WeixinExtendSocialite
     public function handle(SocialiteWasCalled $socialiteWasCalled)
     {
         $socialiteWasCalled->extendSocialite(
-            'weixin', __NAMESPACE__.'\Provider'
+            'wechat', __NAMESPACE__.'\Provider'
         );
     }
 }

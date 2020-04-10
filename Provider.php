@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialiteProviders\Weixin;
+namespace SocialiteProviders\Wechat;
 
 use Laravel\Socialite\Two\ProviderInterface;
 use SocialiteProviders\Manager\OAuth2\AbstractProvider;
@@ -11,7 +11,7 @@ class Provider extends AbstractProvider implements ProviderInterface
     /**
      * Unique Provider Identifier.
      */
-    const IDENTIFIER = 'WEIXIN';
+    const IDENTIFIER = 'WECHAT';
 
     /**
      * @var string
@@ -96,8 +96,9 @@ class Provider extends AbstractProvider implements ProviderInterface
     {
         return (new User())->setRaw($user)->map([
             'id'       => $user['openid'],
-            'nickname' => isset($user['nickname']) ? $user['nickname'] : null,
-            'avatar'   => isset($user['headimgurl']) ? $user['headimgurl'] : null,
+            'unionid' => $user['unionid'] ?? null,
+            'nickname' => $user['nickname'] ?? null,
+            'avatar'   => $user['headimgurl'] ?? null,
             'name'     => null,
             'email'    => null,
         ]);
@@ -131,7 +132,7 @@ class Provider extends AbstractProvider implements ProviderInterface
         }
         
         // 更新openid
-        $this->openId = $this->credentialsResponseBody['openid'];
+        $this->openId = $this->credentialsResponseBody['openid'] ?? null;
 
         return $this->credentialsResponseBody;
     }
