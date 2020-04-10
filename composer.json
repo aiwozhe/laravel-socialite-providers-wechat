@@ -1,5 +1,5 @@
 {
-    "name": "socialiteproviders/wechat",
+    "name": "aiwozhe/laravel-socialite-providers-wechat",
     "description": "Wechat OAuth2 Provider for Laravel Socialite",
     "license": "MIT",
     "authors": [{
