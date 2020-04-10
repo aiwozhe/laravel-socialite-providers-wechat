@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialiteProviders\Weixin;
+namespace SocialiteProviders\Wechat;
 
 use SocialiteProviders\Manager\SocialiteWasCalled;
 
